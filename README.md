@@ -85,6 +85,3 @@ Xを使用
   - ChatGPTやウェブでの検索結果を活用してデータを収集しようと考えております。  
 また、「記載されている情報は、個人の調査に基づくものであり、専門家の意見や結果に基づいていないことをご了承ください。」  
 という表現を組み込むことを検討しております。  
-
-## ■ 画面遷移図
-https://www.figma.com/file/TYm2X0G9XRDpBqZjH4A86S/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?type=design&node-id=0%3A1&mode=design&t=zFrcUpQcwWxZ6tpO-1
