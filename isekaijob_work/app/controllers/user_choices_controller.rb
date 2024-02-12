@@ -11,10 +11,8 @@ class UserChoicesController < ApplicationController
   def create
     # 現在の質問を見つける
     question = Question.find(params[:question_id])
-    
     # 選択肢を見つける
     choice = Choice.find_by(question_id: question.id, choice_text: params[:choice_text])
-    
     # ユーザーの選択を記録する
     UserChoice.create!(question_id: question.id, choice_id: choice.id)
     
@@ -45,7 +43,7 @@ private
     # すべてのYESとNOのポイントの合計を計算
     yes_count = UserChoice.joins(:choice).where(choices: { score: 1 }).count
     no_count = UserChoice.joins(:choice).where(choices: { score: 0 }).count
-    
+
     # 結果のテキストを決定
     result_text = yes_count > no_count ? 'A' : 'B'
     

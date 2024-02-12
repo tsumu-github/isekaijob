@@ -5,6 +5,8 @@
 
 <% if @next_question %>
   <%= link_to 'YES', question_path(@next_question) %>
+  <%# UserChoicesのcreateを呼ぶ %>
+  <%# <%= link_to("YES", user_choices_post_path(question_id: @next_question), data: { turbo_method: "post" }) %>
   <%= link_to 'NO', question_path(@next_question) %>
 <% else %>
   <%= link_to 'リザルトへ', results_path %>

@@ -2,7 +2,6 @@ class ResultsController < ApplicationController
   def index
     yes_count = UserChoice.joins(:choice).where(choices: { score: 1 }).count
     no_count = UserChoice.joins(:choice).where(choices: { score: 0 }).count
-    
     # もしyes_count または no_count が nil であれば、0 として扱います
     yes_count ||= 0
     no_count ||= 0
