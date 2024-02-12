@@ -60,5 +60,17 @@ questions = [
 
 # Questionsテーブルにデータを挿入
 questions.each do |attrs|
-    Question.create!(attrs)
-  end
+  Question.create!(attrs)
+end
+
+# Questionsテーブルのデータを取得
+questions = Question.all
+
+# すべての質問に対して選択肢を作成
+questions.each do |question|
+  # YESの選択肢を追加
+  Choice.create!(choice_text: 'YES', score: 1, question_id: question.id)
+
+  # NOの選択肢を追加
+  Choice.create!(choice_text: 'NO', score: 0, question_id: question.id)
+end

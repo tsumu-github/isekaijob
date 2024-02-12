@@ -22,8 +22,8 @@ Rails.application.routes.draw do
   resources :job_profiles, only: [:index, :show]
 
   # 更に追加
-  get '/show_questions', to: 'questions#show'
   get '/girudo/index', to: 'girudo_questions#index', as: 'girudo_question_index'
   resources :girudo_questions, only: [:index, :show]
+  post 'calculate_results', to: 'user_choices#calculate_results', as: :calculate_results
 
 end
