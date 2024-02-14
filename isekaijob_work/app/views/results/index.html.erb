@@ -1,4 +1,5 @@
 <h1>Results#index</h1>
 <p>Find me in app/views/results/index.html.erb</p>
 
-<p>あなたの結果は<%= @result.result_text %>です。合計ポイント: <%= @result.count %></p>
+<p>あなたの結果は <%= session[:result] %> です。合計ポイント: <%= session[:answers]['YES'] %></p>
+

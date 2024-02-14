@@ -24,10 +24,6 @@ Rails.application.routes.draw do
   # 更に追加
   get '/girudo/index', to: 'girudo_questions#index', as: 'girudo_question_index'
   resources :girudo_questions, only: [:index, :show]
-  post 'calculate_results', to: 'user_choices#calculate_results', as: :calculate_results
-  #post '/girudo/index', to: 'user_choices_controller#create'
+  # post 'calculate_results', to: 'user_choices#calculate_results', as: :calculate_results
   
-  # User_choiceのcreateのルーティング
-  post '/user_choices/post', to: 'user_choices#create'
-
 end

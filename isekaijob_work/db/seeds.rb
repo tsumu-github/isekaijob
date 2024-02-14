@@ -29,6 +29,7 @@ questions = [
   { girudo_question_id: girudo1_id, question_text: 'Girudo1の質問1-7' },
   { girudo_question_id: girudo1_id, question_text: 'Girudo1の質問1-8' },
   { girudo_question_id: girudo1_id, question_text: 'Girudo1の質問1-9' },
+  { girudo_question_id: girudo1_id, question_text: 'Girudo1の質問終了' },
   { girudo_question_id: girudo2_id, question_text: 'Girudo2の質問2-1' },
   { girudo_question_id: girudo2_id, question_text: 'Girudo2の質問2-2' },
   { girudo_question_id: girudo2_id, question_text: 'Girudo2の質問2-3' },
@@ -38,6 +39,7 @@ questions = [
   { girudo_question_id: girudo2_id, question_text: 'Girudo2の質問2-7' },
   { girudo_question_id: girudo2_id, question_text: 'Girudo2の質問2-8' },
   { girudo_question_id: girudo2_id, question_text: 'Girudo2の質問2-9' },
+  { girudo_question_id: girudo2_id, question_text: 'Girudo2の質問終了' },
   { girudo_question_id: girudo3_id, question_text: 'Girudo3の質問3-1' },
   { girudo_question_id: girudo3_id, question_text: 'Girudo3の質問3-2' },
   { girudo_question_id: girudo3_id, question_text: 'Girudo3の質問3-3' },
@@ -47,6 +49,7 @@ questions = [
   { girudo_question_id: girudo3_id, question_text: 'Girudo3の質問3-7' },
   { girudo_question_id: girudo3_id, question_text: 'Girudo3の質問3-8' },
   { girudo_question_id: girudo3_id, question_text: 'Girudo3の質問3-9' },
+  { girudo_question_id: girudo3_id, question_text: 'Girudo3の質問終了' },
   { girudo_question_id: girudo4_id, question_text: 'Girudo4の質問4-1' },
   { girudo_question_id: girudo4_id, question_text: 'Girudo4の質問4-2' },
   { girudo_question_id: girudo4_id, question_text: 'Girudo4の質問4-3' },
@@ -56,6 +59,7 @@ questions = [
   { girudo_question_id: girudo4_id, question_text: 'Girudo4の質問4-7' },
   { girudo_question_id: girudo4_id, question_text: 'Girudo4の質問4-8' },
   { girudo_question_id: girudo4_id, question_text: 'Girudo4の質問4-9' },
+  { girudo_question_id: girudo4_id, question_text: 'Girudo4の質問終了' },
 ]
 
 # Questionsテーブルにデータを挿入
