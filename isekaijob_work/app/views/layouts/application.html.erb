@@ -8,6 +8,7 @@
 
     <!-- アプリケーションのスタイルシートを読み込むだけでなく、Turboフレームワークと連携してページの再読み込み時の動作を制御する -->
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
   </head>
 
   <body>
