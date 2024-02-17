@@ -1,10 +1,14 @@
 <p>/app/views/girudo_questions/index.html.erb</p>
 
-<h1>どのギルドに所属しますか？</h1>
+<!-- CSSファイルを読み込む -->
+<%= stylesheet_link_tag 'girudo_questions/index' %>
 
-<!-- app/views/girudo_questions/index.html.erb -->
-
-<% @girudo_questions.each do |girudo_question| %>
+<!-- HTMLファイル -->
+<div class="grid-container">
+  <% @girudo_questions.each do |girudo_question| %>
     <% first_question_id = girudo_question.questions.order(:id).first.id %>
-    <%= link_to image_tag("girudo#{girudo_question.id}.png"), question_path(first_question_id) %>
-<% end %>
+    <div class="grid-item">
+      <%= link_to image_tag("girudo#{girudo_question.id}.png"), question_path(first_question_id) %>
+    </div>
+  <% end %>
+</div>

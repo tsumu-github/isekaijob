@@ -1,0 +1,18 @@
+/* TOP画面 */
+<style>
+  .TOP {
+    width: 100%;
+    max-width: 100vw; /* モニターの横幅いっぱいに広げる */
+    overflow: hidden; /* 横スクロールを禁止 */
+  }
+  
+  .TOP img {
+    width: 100%;
+    height: auto; /* アスペクト比を維持しつつ横幅いっぱいに広げる */
+    display: block;
+  }
+</style>
+
+<div class="TOP">
+  <img src="/assets/TOP.gif" alt="TOP GIF">
+</div>

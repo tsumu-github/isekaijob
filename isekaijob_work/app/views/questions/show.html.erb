@@ -1,11 +1,22 @@
-<h1>Questions#show</h1>
-<p>Find me in app/views/questions/show.html.erb</p>
+<p>app/views/questions/show.html.erb</p>
 
-<p>質問: <%= @question.question_text %></p>
+<div class="Question_wrapper">
+    <div class="Question_pop">
+        <img src="/assets/Question_pop.png" alt="Question_pop" class="center-image">
+        <div class="overlay">
+          <!-- 画像の上に配置するテキスト -->
+          <div class="Question_text">
+            <p><%= @question.question_text %></p>
+          </div>
+        </div>
+    </div>
+</div>
 
-<% if @next_question %>
-  <%= link_to 'YES', question_path(@next_question, choice: 'YES') %>
-  <%= link_to 'NO', question_path(@next_question, choice: 'NO') %>
-<% else %>
-  <%= link_to 'リザルトへ', results_path %>
-<% end %>
+<div class="blackboard_answer">
+  <% if @next_question %>
+    <p><%= link_to 'YES', question_path(@next_question, choice: 'YES') %></p>
+    <p><%= link_to 'NO', question_path(@next_question, choice: 'NO') %></p>
+  <% else %>
+    <p><%= link_to 'リザルトへ', results_path %></p>
+  <% end %>
+</div>

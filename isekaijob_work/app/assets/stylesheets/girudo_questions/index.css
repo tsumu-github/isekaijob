@@ -1,0 +1,17 @@
+/* グリッドコンテナ */
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* 横方向に要素を等間隔で配置 */
+  }
+  
+  /* グリッドアイテム */
+  .grid-item {
+    width: calc(50% - 20px);
+    margin-bottom: 40px; /* 下マージンを追加して、アイテム間のスペースを確保 */
+  }
+  
+  /* 画像 */
+  .grid-item img {
+    width: 100%; /* 画像を親要素の幅いっぱいに広げる */
+  }
