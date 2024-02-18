@@ -7,16 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- NES.css CDNリンク -->
-<link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet">
 
-<!-- 外部のCSSファイルをリンク -->
-<link rel="stylesheet" type="text/css" href="/assets/stylesheets/results/index.css">
-</head>
+  <!-- 外部のCSSファイルをリンク -->
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/results/index.css">
 
-<!-- Swiper CSS -->
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <!-- Googlefont -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+  </head>
 
 
 <body>
@@ -32,56 +32,35 @@
     <img src="/assets/girudo1_1.svg" alt="girudo1_1">
   </div>
 
-<!-- 
-  <div class="nes-container is-dark with-title">
-    <p class="title">ユニークスキル</p>
-    <p>・変革の風： 伝統を打ち破り、周囲の環境を一新する魔法で、一定時間、味方の特殊能力を強化。</p>
-    <p>・進化の輪： 革新的な技術を戦場に展開し、味方の攻撃方法を一時的に変化させ、敵に予測不能なダメージを与える。</p>
-    <p>・技術革新の陣： 最先端の技術を用いて特殊な陣を形成し、その範囲内の味方は回避率と攻撃速度が上昇。</p>
+  <div class="setsumei">
+    <br>人々の心をつなぎ、和をもたらす魔法少女です。</br>
+    <br>彼女の戦闘スタイルは、言葉と感情の力を用いて、敵を和解へと導くことにあります。</br>
+    <br>戦場では、彼女の魔法は敵の怒りを鎮め、誤解を解くことで戦闘を避けることができます。</br>
+    <br>敵との対話を通じて心を開かせ、平和的な解決策を見出します。</br>
+    <br>彼女の存在は、チーム内の団結力を高め、全員が一致団結して目的を達成できるよう助けます。</br>
   </div>
 
-  <div class="nes-container is-dark with-title">
-    <p class="title">弱点</p>
-    <p>・変革の風： 伝統を打ち破り、周囲の環境を一新する魔法で、一定時間、味方の特殊能力を強化。</p>
-    <p>・進化の輪： 革新的な技術を戦場に展開し、味方の攻撃方法を一時的に変化させ、敵に予測不能なダメージを与える。</p>
-    <p>・技術革新の陣： 最先端の技術を用いて特殊な陣を形成し、その範囲内の味方は回避率と攻撃速度が上昇。</p>
+
+  <div class="status1_1">
+    <img src="/assets/status1_1.gif" alt="status1_1">
   </div>
 
-  <div class="nes-container is-dark with-title">
-    <p class="title">リフレッシュ方法</p>
-    <p>・変革の風： 伝統を打ち破り、周囲の環境を一新する魔法で、一定時間、味方の特殊能力を強化。</p>
-    <p>・進化の輪： 革新的な技術を戦場に展開し、味方の攻撃方法を一時的に変化させ、敵に予測不能なダメージを与える。</p>
-    <p>・技術革新の陣： 最先端の技術を用いて特殊な陣を形成し、その範囲内の味方は回避率と攻撃速度が上昇。</p>
-  </div>
-
-  <div class="nes-container is-dark with-title">
-  <p class="title">向いてる職業</p>
-  <p>・変革の風： 伝統を打ち破り、周囲の環境を一新する魔法で、一定時間、味方の特殊能力を強化。</p>
-  <p>・進化の輪： 革新的な技術を戦場に展開し、味方の攻撃方法を一時的に変化させ、敵に予測不能なダメージを与える。</p>
-  <p>・技術革新の陣： 最先端の技術を用いて特殊な陣を形成し、その範囲内の味方は回避率と攻撃速度が上昇。</p>
-  </div>
--->
 
 <!-- スライドの外枠 -->
 <div class="slide-wrapper">
   <!-- スライド（コンテンツ） -->
   <div id="slide" class="slide">
     <div>
-    <div class="nes-container is-dark with-title">
-      <p class="title">ユニークスキル</p>
-      <br>・変革の風： 伝統を打ち破り、周囲の環境を一新する魔法で、一定時間、味方の特殊能力を強化。<br>
-      <br>・進化の輪： 革新的な技術を戦場に展開し、味方の攻撃方法を一時的に変化させ、敵に予測不能なダメージを与える。<br>
-      <br>・技術革新の陣： 最先端の技術を用いて特殊な陣を形成し、その範囲内の味方は回避率と攻撃速度が上昇。<br>
-    </div>
+      <br>ユニークスキル</br>
+      <br>「心の絆」 - チームメンバー間の信頼を深め、団結力を高める。この技能で一定時間、味方全員の攻撃力と防御力が上昇する。</br>
+      <br>「和解の調べ」 - 対立や意見の相違を平和的に解決し、チームの調和を保つ。この技能で敵による状態異常の効果を一時的に軽減する。</br>
+      <br>「士気の光」 - 周囲の味方のモラルを高め、戦闘意欲を刺激する。この技能で一定時間、味方のスキル冷却時間を短縮する。</br>
     </div>
     <div>
-      <p class="title">弱点</p>
-      <p>・変革の風： 伝統を打ち破り、周囲の環境を一新する魔法で、一定時間、味方の特殊能力を強化。</p>
-      <p>・進化の輪： 革新的な技術を戦場に展開し、味方の攻撃方法を一時的に変化させ、敵に予測不能なダメージを与える。</p>
-      <p>・技術革新の陣： 最先端の技術を用いて特殊な陣を形成し、その範囲内の味方は回避率と攻撃速度が上昇。</p>
+      <p>弱点</p>
     </div>
     <div>
-      <p>スライド３</p>
+      <p>リフレッシュ方法</p>
     </div>
   </div>
   <!-- 左右のボタン -->
@@ -95,6 +74,23 @@
   </ul>
 </div>
 
-</body>
 
+<!-- あなたに向いているかもしれない職業 -->
+<div class="job">
+  <br>対人関係を重視し、円滑なコミュニケーションを通じて人々との繋がりを深めることを得意とする</br>
+  <br>あなたに向いているかもしれない職業は・・・</br>
+  <br>警察官(仮)です。</br>
+</div>
+
+
+<div class="status1_1">
+  <img src="/assets/X_bottun.png" alt="X_bottun.png">
+</div>
+
+
+<div class="tyuuigaki">
+  <p>※ 記載されている情報は、個人の調査に基づくものであり、専門家の意見や結果に基づいていないことをご了承ください。</p>
+</div>
+
+</body>
 </html>

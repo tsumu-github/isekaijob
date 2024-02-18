@@ -25,7 +25,7 @@ function prevClick() {
   updateListBackground();
 }
 function startAutoPlay() {
-  autoPlayInterval = setInterval(nextClick, 3000);
+  autoPlayInterval = setInterval(nextClick, 25000);
 }
 function resetAutoPlayInterval() {
   clearInterval(autoPlayInterval);
