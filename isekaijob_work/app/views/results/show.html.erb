@@ -1,3 +1,196 @@
-<p>Find me in app/views/results/show.html.erb</p>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
 
-<p>あ</p>
+  <!-- モバイルなどの小さい画面を持つデバイスでウェブページを表示する際に、ビューポートの設定を指定するためのHTMLメタタグ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- NES.css CDNリンク -->
+  <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet">
+
+  <!-- 外部のCSSファイルをリンク -->
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/results/show.css">
+
+  <!-- Googlefont -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+  </head>
+
+
+<body>
+  <h1>Results#show</h1>
+  <p>Find me in app/views/results/show.html.erb</p>
+  <p>あなたの結果は <%= @result.result_text %> です。合計ポイント: <%= session[:answers]['YES'] %></p>
+
+
+
+<!-- 魔法少女の名称 -->
+<% if session[:result_id] == 1 %>
+  <div class="girudo1_1_title">
+    <%= image_tag 'girudo1_1.gif', alt: 'girudo1_1 GIF' %>
+  </div>
+<% elsif session[:result] == 'B' %>
+  <div class="girudo1_2_title">
+    <img src="/assets/girudo1_2.gif" alt="girudo1_2 GIF">
+  </div>
+<% elsif session[:result] == 'C' %>
+  <div class="girudo2_1_title">
+    <img src="/assets/girudo2_1.gif" alt="girudo2_1 GIF">
+  </div>
+<% elsif session[:result] == 'D' %>
+  <div class="girudo2_2_title">
+    <img src="/assets/girudo2_2.gif" alt="girudo2_2 GIF">
+  </div>
+<% elsif session[:result] == 'E' %>
+  <div class="girudo3_1_title">
+    <img src="/assets/girudo3_1.gif" alt="girudo3_1 GIF">
+  </div>
+<% elsif session[:result] == 'F' %>
+  <div class="girudo3_2_title">
+    <img src="/assets/girudo3_2.gif" alt="girudo3_2 GIF">
+  </div>
+<% elsif session[:result] == 'G' %>
+  <div class="girudo4_1_title">
+    <img src="/assets/girudo4_1.gif" alt="girudo4_1 GIF">
+  </div>
+<% elsif session[:result] == 'H' %>
+  <div class="girudo4_1_title">
+    <img src="/assets/girudo4_2.gif" alt="girudo4_2 GIF">
+  </div>
+<% end %>
+
+
+
+<!-- 魔法少女のイメージ画像 -->
+<% if session[:result_id] == 1 %>
+  <div class="girudo1_1">
+    <%= image_tag 'girudo1_1.svg', alt: 'girudo1_1 SVG' %>
+  </div>
+<% elsif session[:result] == 'B' %>
+  <div class="girudo1_2">
+    <img src="/assets/girudo1_2.svg" alt="girudo1_2 SVG">
+  </div>
+<% elsif session[:result] == 'C' %>
+  <div class="girudo2_1">
+    <img src="/assets/girudo2_1.svg" alt="girudo2_1 SVG">
+  </div>
+<% elsif session[:result] == 'C' %>
+  <div class="girudo2_2">
+    <img src="/assets/girudo2_2.svg" alt="girudo2_2 SVG">
+  </div>
+<% elsif session[:result] == 'D' %>
+  <div class="girudo3_1">
+    <img src="/assets/girudo3_1.svg" alt="girudo3_1 SVG">
+  </div>
+<% elsif session[:result] == 'E' %>
+  <div class="girudo3_2">
+    <img src="/assets/girudo3_2.svg" alt="girudo3_2 SVG">
+  </div>
+<% elsif session[:result] == 'F' %>
+  <div class="girudo4_1">
+    <img src="/assets/girudo4_1.svg" alt="girudo4_1 SVG">
+  </div>
+<% elsif session[:result] == 'F' %>
+  <div class="girudo4_2">
+    <img src="/assets/girudo4_2.svg" alt="girudo4_2 SVG">
+  </div>
+<% end %>
+
+
+
+  <div class="setsumei">
+    <br>人々の心をつなぎ、和をもたらす魔法少女です。</br>
+    <br>彼女の戦闘スタイルは、言葉と感情の力を用いて、敵を和解へと導くことにあります。</br>
+    <br>戦場では、彼女の魔法は敵の怒りを鎮め、誤解を解くことで戦闘を避けることができます。</br>
+    <br>敵との対話を通じて心を開かせ、平和的な解決策を見出します。</br>
+    <br>彼女の存在は、チーム内の団結力を高め、全員が一致団結して目的を達成できるよう助けます。</br>
+  </div>
+
+
+<!-- ステータス画像 -->
+<% if session[:result_id] == 1 %>
+  <div class="status1_1">
+    <%= image_tag 'status1_1.gif', alt: 'girudo1_1 GIF' %>
+  </div>
+<% elsif session[:result] == 'B' %>
+  <div class="status1_2">
+    <img src="/assets/status1_2.gif" alt="status1_2 GIF">
+  </div>
+<% elsif session[:result] == 'C' %>
+  <div class="status2_1">
+    <img src="/assets/status2_1.gif" alt="status2_1 GIF">
+  </div>
+<% elsif session[:result] == 'D' %>
+  <div class="status2_2">
+    <img src="/assets/status2_2.gif" alt="status2_2 GIF">
+  </div>
+<% elsif session[:result] == 'E' %>
+  <div class="status3_1">
+    <img src="/assets/status3_1.gif" alt="status3_1 GIF">
+  </div>
+<% elsif session[:result] == 'F' %>
+  <div class="status3_2">
+    <img src="/assets/status3_2.gif" alt="status3_2 GIF">
+  </div>
+<% elsif session[:result] == 'G' %>
+  <div class="status4_1">
+    <img src="/assets/status4_1.gif" alt="status4_1 GIF">
+  </div>
+<% elsif session[:result] == 'H' %>
+  <div class="status4_2">
+    <img src="/assets/status4_2.gif" alt="status4_2 GIF">
+  </div>
+<% end %>
+
+
+
+<!-- スライドの外枠 -->
+<div class="slide-wrapper">
+  <!-- スライド（コンテンツ） -->
+  <div id="slide" class="slide">
+    <div>
+      <br>ユニークスキル</br>
+      <br>「心の絆」 - チームメンバー間の信頼を深め、団結力を高める。この技能で一定時間、味方全員の攻撃力と防御力が上昇する。</br>
+      <br>「和解の調べ」 - 対立や意見の相違を平和的に解決し、チームの調和を保つ。この技能で敵による状態異常の効果を一時的に軽減する。</br>
+      <br>「士気の光」 - 周囲の味方のモラルを高め、戦闘意欲を刺激する。この技能で一定時間、味方のスキル冷却時間を短縮する。</br>
+    </div>
+    <div>
+      <p>弱点</p>
+    </div>
+    <div>
+      <p>リフレッシュ方法</p>
+    </div>
+  </div>
+  <!-- 左右のボタン -->
+  <span id="prev" class="prev"></span>
+  <span id="next" class="next"></span>
+  <!-- インジケーター -->
+  <ul class="indicator" id="indicator">
+    <li class="list"></li>
+    <li class="list"></li>
+    <li class="list"></li>
+  </ul>
+</div>
+
+
+<!-- あなたに向いているかもしれない職業 -->
+<div class="job">
+  <br>対人関係を重視し、円滑なコミュニケーションを通じて人々との繋がりを深めることを得意とする</br>
+  <br>あなたに向いているかもしれない職業は・・・</br>
+  <br>警察官(仮)です。</br>
+</div>
+
+
+<div class="status1_1">
+  <img src="/assets/X_bottun.png" alt="X_bottun.png">
+</div>
+
+
+<div class="tyuuigaki">
+  <p>※ 記載されている情報は、個人の調査に基づくものであり、専門家の意見や結果に基づいていないことをご了承ください。</p>
+</div>
+
+</body>
+</html>

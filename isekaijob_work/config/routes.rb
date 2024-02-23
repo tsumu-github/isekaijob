@@ -7,25 +7,26 @@ Rails.application.routes.draw do
   get 'girudo_questions/index'
   get 'girudo_questions/show'
   get 'girudo/index'
+  resources :results, only: [:show]
+  
 
-  # Questionsとその関連するChoicesとUserChoices
+  # Questionsと関連するChoicesとUserChoices
   resources :questions do
     resources :choices
     resources :user_choices
   end
 
-  # Resultsとその単一関連するJobProfile
-  resources :results do
+  # Resultsと関連するJobProfile
+  resources :results, only: [:show] do
     resource :job_profile
   end
+
   # 別のリソース（もし必要なら）
-  resources :job_profiles, only: [:index, :show]
+  resources :job_profiles, only: [:show]
 
   # 更に追加
   get '/girudo/index', to: 'girudo_questions#index', as: 'girudo_question_index'
   resources :girudo_questions, only: [:index, :show]
   # post 'calculate_results', to: 'user_choices#calculate_results', as: :calculate_results
   
-  # /results/:idというパスでResultsControllerのshowアクションにアクセスできるようにする
-  resources :results, only: [:index]
 end

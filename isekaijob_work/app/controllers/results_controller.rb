@@ -3,6 +3,7 @@ class ResultsController < ApplicationController
   end
 
   def show
+    @result = Result.find(params[:id])
   end
 
   def new

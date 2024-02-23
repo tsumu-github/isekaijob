@@ -41,22 +41,22 @@ class QuestionsController < ApplicationController
       current_girudo_id = @question.girudo_question_id
 
       # YESの回数に基づいてリザルト結果を決定
-      result_text = case current_girudo_id
+      result_id = case current_girudo_id
                     when 1
-                      yes_count > 4 ? 'A' : 'B'
+                      yes_count > 4 ? 1 : 2
                     when 2
-                      yes_count > 4 ? 'C' : 'D'
+                      yes_count > 4 ? 3 : 4
                     when 3
-                      yes_count > 4 ? 'E' : 'F'
+                      yes_count > 4 ? 5 : 6
                     when 4
-                      yes_count > 4 ? 'G' : 'H'
+                      yes_count > 4 ? 7 : 8
                     else
                       'Unknown'
                     end
 
-      # リザルト結果をセッションに保存し、リザルト画面にリダイレクト
-      session[:result] = result_text
-      redirect_to results_path and return
+      # リザルト結果をセッションに保存し、対応するリザルトIDのページにリダイレクト
+      session[:result_id] = result_id
+      redirect_to result_path(result_id) and return
     end
 
     # 次の質問を取得（存在する場合）
