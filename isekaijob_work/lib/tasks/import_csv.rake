@@ -14,4 +14,11 @@ namespace :import_csv do
     end
   end
 
+  desc "Import Results from CSV"
+  task results: :environment do
+    CSV.foreach(Rails.root.join('db', 'csv_data', 'Results.csv'), headers: true) do |row|
+      Result.create! row.to_hash
+    end
+  end
+
 end

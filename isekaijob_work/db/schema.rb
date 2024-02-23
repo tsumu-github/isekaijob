@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_02_21_131657) do
+ActiveRecord::Schema[7.0].define(version: 2024_02_23_063851) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -31,14 +31,14 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_21_131657) do
 
   create_table "job_profiles", force: :cascade do |t|
     t.bigint "result_id", null: false
-    t.text "job_image"
-    t.text "job_name_isekai"
+    t.text "image_url_magicalgirl_gazo"
+    t.text "image_url_magicalgirl_name"
     t.text "content"
     t.text "status"
-    t.text "unique_skill"
+    t.text "strengths"
     t.text "zyakuten"
     t.text "refresh"
-    t.text "gendai_job"
+    t.text "job"
     t.text "rare"
     t.text "compatibility"
     t.datetime "created_at", null: false
