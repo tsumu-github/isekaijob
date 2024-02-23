@@ -24,13 +24,81 @@
   <p>Find me in app/views/results/index.html.erb</p>
   <p>あなたの結果は <%= session[:result] %> です。合計ポイント: <%= session[:answers]['YES'] %></p>
 
+
+
+<!-- 魔法少女の名称 -->
+<% if session[:result] == 'A' %>
   <div class="girudo1_1_title">
     <img src="/assets/girudo1_1.gif" alt="girudo1_1 GIF">
   </div>
-
-  <div class="girudo1_1">
-    <img src="/assets/girudo1_1.svg" alt="girudo1_1">
+<% elsif session[:result] == 'B' %>
+  <div class="girudo1_2_title">
+    <img src="/assets/girudo1_2.gif" alt="girudo1_2 GIF">
   </div>
+<% elsif session[:result] == 'C' %>
+  <div class="girudo2_1_title">
+    <img src="/assets/girudo2_1.gif" alt="girudo2_1 GIF">
+  </div>
+<% elsif session[:result] == 'D' %>
+  <div class="girudo2_2_title">
+    <img src="/assets/girudo2_2.gif" alt="girudo2_2 GIF">
+  </div>
+<% elsif session[:result] == 'E' %>
+  <div class="girudo3_1_title">
+    <img src="/assets/girudo3_1.gif" alt="girudo3_1 GIF">
+  </div>
+<% elsif session[:result] == 'F' %>
+  <div class="girudo3_2_title">
+    <img src="/assets/girudo3_2.gif" alt="girudo3_2 GIF">
+  </div>
+<% elsif session[:result] == 'G' %>
+  <div class="girudo4_1_title">
+    <img src="/assets/girudo4_1.gif" alt="girudo4_1 GIF">
+  </div>
+<% elsif session[:result] == 'H' %>
+  <div class="girudo4_1_title">
+    <img src="/assets/girudo4_2.gif" alt="girudo4_2 GIF">
+  </div>
+<% end %>
+
+
+
+<!-- 魔法少女のイメージ画像 -->
+<% if session[:result] == 'A' %>
+  <div class="girudo1_1">
+    <img src="/assets/girudo1_1.svg" alt="girudo1_1 SVG">
+  </div>
+<% elsif session[:result] == 'B' %>
+  <div class="girudo1_2">
+    <img src="/assets/girudo1_2.svg" alt="girudo1_2 SVG">
+  </div>
+<% elsif session[:result] == 'C' %>
+  <div class="girudo2_1">
+    <img src="/assets/girudo2_1.svg" alt="girudo2_1 SVG">
+  </div>
+<% elsif session[:result] == 'C' %>
+  <div class="girudo2_2">
+    <img src="/assets/girudo2_2.svg" alt="girudo2_2 SVG">
+  </div>
+<% elsif session[:result] == 'D' %>
+  <div class="girudo3_1">
+    <img src="/assets/girudo3_1.svg" alt="girudo3_1 SVG">
+  </div>
+<% elsif session[:result] == 'E' %>
+  <div class="girudo3_2">
+    <img src="/assets/girudo3_2.svg" alt="girudo3_2 SVG">
+  </div>
+<% elsif session[:result] == 'F' %>
+  <div class="girudo4_1">
+    <img src="/assets/girudo4_1.svg" alt="girudo4_1 SVG">
+  </div>
+<% elsif session[:result] == 'F' %>
+  <div class="girudo4_2">
+    <img src="/assets/girudo4_2.svg" alt="girudo4_2 SVG">
+  </div>
+<% end %>
+
+
 
   <div class="setsumei">
     <br>人々の心をつなぎ、和をもたらす魔法少女です。</br>
@@ -41,9 +109,41 @@
   </div>
 
 
+<!-- ステータス画像 -->
+<% if session[:result] == 'A' %>
   <div class="status1_1">
-    <img src="/assets/status1_1.gif" alt="status1_1">
+    <img src="/assets/status1_1.gif" alt="status1_1 GIF">
   </div>
+<% elsif session[:result] == 'B' %>
+  <div class="status1_2">
+    <img src="/assets/status1_2.gif" alt="status1_2 GIF">
+  </div>
+<% elsif session[:result] == 'C' %>
+  <div class="status2_1">
+    <img src="/assets/status2_1.gif" alt="status2_1 GIF">
+  </div>
+<% elsif session[:result] == 'D' %>
+  <div class="status2_2">
+    <img src="/assets/status2_2.gif" alt="status2_2 GIF">
+  </div>
+<% elsif session[:result] == 'E' %>
+  <div class="status3_1">
+    <img src="/assets/status3_1.gif" alt="status3_1 GIF">
+  </div>
+<% elsif session[:result] == 'F' %>
+  <div class="status3_2">
+    <img src="/assets/status3_2.gif" alt="status3_2 GIF">
+  </div>
+<% elsif session[:result] == 'G' %>
+  <div class="status4_1">
+    <img src="/assets/status4_1.gif" alt="status4_1 GIF">
+  </div>
+<% elsif session[:result] == 'H' %>
+  <div class="status4_2">
+    <img src="/assets/status4_2.gif" alt="status4_2 GIF">
+  </div>
+<% end %>
+
 
 
 <!-- スライドの外枠 -->

@@ -17,7 +17,7 @@ class QuestionsController < ApplicationController
     # 今回の質問内容取得
     @question = Question.find(params[:id])
     
-    # 
+    # セッションを使用してユーザーの選択を記録する
     session[:answers][@question.id] = params[:choice] if params[:choice]
 
     # 加算判定(YESの場合のみ)

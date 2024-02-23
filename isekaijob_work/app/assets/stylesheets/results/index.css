@@ -4,7 +4,14 @@
 
 
 /* 職業タイトルを表示 */
-.girudo1_1_title img {
+.girudo1_1_title img,
+.girudo1_2_title img,
+.girudo2_1_title img,
+.girudo2_2_title img,
+.girudo3_1_title img,
+.girudo3_2_title img,
+.girudo4_1_title img,
+.girudo4_2_title img {
     max-width: 80%; /* 画像の最大幅を画面の横幅の80%に設定 */
     max-height: 65vh; /* 画像の最大高さを画面の高さの65%に設定 */
     display: block; /* 画像をブロック要素として扱う */
@@ -13,7 +20,14 @@
 
 
 /* イメージ画像を表示 */
-.girudo1_1 img {
+.girudo1_1 img,
+.girudo1_2 img,
+.girudo2_1 img,
+.girudo2_2 img,
+.girudo3_1 img,
+.girudo3_2 img,
+.girudo4_1 img,
+.girudo4_2 img {
     max-width: 70%;
     max-height: 65vh;
     display: block;
@@ -22,12 +36,21 @@
   
 
 /* ステータス画像を表示 */
-.status1_1 img {
+.status1_1 img,
+.status1_2 img,
+.status2_1 img,
+.status2_2 img,
+.status3_1 img,
+.status3_2 img,
+.status4_1 img,
+.status4_2 img {
   max-width: 70%;
   max-height: 65vh;
   display: block;
   margin: 0 auto;
 }
+
+
 
 
 
