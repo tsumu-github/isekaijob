@@ -21,4 +21,11 @@ namespace :import_csv do
     end
   end
 
+  desc "Import Job_profiles from CSV"
+  task job_profiles: :environment do
+    CSV.foreach(Rails.root.join('db', 'csv_data', 'Job_profiles.csv'), headers: true) do |row|
+      JobProfile.create! row.to_hash
+    end
+  end
+
 end

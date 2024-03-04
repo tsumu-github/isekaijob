@@ -29,4 +29,8 @@ Rails.application.routes.draw do
   resources :girudo_questions, only: [:index, :show]
   # post 'calculate_results', to: 'user_choices#calculate_results', as: :calculate_results
   
+  
+  # 利用規約、プライバシーポリシー
+  get '/riyoukiyaku', to: 'home#riyoukiyaku', as: 'riyoukiyaku'
+  get '/privacy_policy', to: 'home#privacy_policy', as: 'privacy_policy'
 end

@@ -15,3 +15,17 @@
   .grid-item img {
     width: 100%; /* 画像を親要素の幅いっぱいに広げる */
   }
+
+  /* ★レスポンシブデザイン★ 画面が900px以下の時には画像を縦に並べる */
+  @media (max-width: 900px) {
+    .grid-container {
+      display: flex;
+      flex-direction: column; /* アイテムを縦に配置 */
+      justify-content: center; /* 横方向の中央揃え */
+      align-items: center; /* 縦方向の中央揃え */
+    }
+
+    .grid-item {
+      width: calc(100% - 20px); /* アイテムの幅を100%に設定 */
+    }
+  }

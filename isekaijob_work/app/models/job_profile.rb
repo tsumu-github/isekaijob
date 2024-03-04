@@ -9,6 +9,15 @@ class JobProfile < ApplicationRecord
   validates :zyakuten, presence: true, length: { minimum: 5, maximum: 500 }
   validates :refresh, presence: true, length: { minimum: 5, maximum: 500 }
   validates :job, presence: true, length: { minimum: 5, maximum: 100 }
-  validates :rare, presence: true, length: { minimum: 5, maximum: 500 }
-  validates :compatibility, presence: true, length: { minimum: 5, maximum: 500 }
+
+
+  # CSVファイルを読み込むために記述
+  require 'csv'
+  # CSVファイルのヘッダーがResultモデルの属性名と一致していると仮定
+    def self.import_from_csv(file_path)
+      CSV.foreach(file_path, headers: true) do |row|
+        JobProfile.create!(row.to_hash)
+    end
+  end
+
 end

@@ -1,17 +1,14 @@
-<p>/app/views/girudo_questions/index.html.erb</p>
-
-<!-- CSSファイルを読み込む -->
+<%# CSSファイルを読み込む %>
 <%= stylesheet_link_tag 'girudo_questions/index' %>
 
 
-<!-- 文章 -->
-<div class="job">
-  <p>魔法少女ギルドに所属するよ。</p>
-  <p>直感で選んでね。</p>
+<%# ギルド選択画面の文字 %>
+<div class="line">
+  <img src="/assets/hane.gif" alt="hane.gif">
+  <img src="/assets/girudo_sentaku.png" alt="girudo_sentaku.png">
 </div>
 
-
-<!-- HTMLファイル -->
+<%# HTMLファイル %>
 <div class="grid-container">
   <% @girudo_questions.each do |girudo_question| %>
     <% first_question_id = girudo_question.questions.order(:id).first.id %>
