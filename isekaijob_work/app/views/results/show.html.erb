@@ -14,6 +14,11 @@
 
 
 <body>
+  <%# 羽画像 %>
+  <div class="hane">
+    <img src="/assets/hane.gif" alt="hane.gif">
+  </div>
+
 
   <%# 魔法少女の名称 %>
   <% if @job_profile.present? %>
@@ -42,7 +47,7 @@
   <%# ステータス画像 %>
   <% if @job_profile.present? %>
     <div class="status">
-      <%= image_tag @job_profile.status, alt: 'Status.gif' %>
+      <%= image_tag @job_profile.status, alt: 'status.gif' %>
     </div>
   <% end %>
 
