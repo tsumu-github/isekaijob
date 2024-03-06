@@ -74,3 +74,6 @@ gem "draper"
 gem "chartkick"
 gem "pry-rails"
 gem "webpacker"
+
+# Herokuデプロイのため追加
+gem 'rake'
