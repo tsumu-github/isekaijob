@@ -1,0 +1,19 @@
+<%# CSSファイルを読み込む %>
+<%= stylesheet_link_tag 'girudo_questions/index' %>
+
+
+<%# ギルド選択画面の文字 %>
+<div class="line">
+  <img src="/assets/hane.gif" alt="hane.gif">
+  <img src="/assets/girudo_sentaku.png" alt="girudo_sentaku.png">
+</div>
+
+<%# HTMLファイル %>
+<div class="grid-container">
+  <% @girudo_questions.each do |girudo_question| %>
+    <% first_question_id = girudo_question.questions.order(:id).first.id %>
+    <div class="grid-item">
+      <%= link_to image_tag("girudo#{girudo_question.id}.png"), question_path(first_question_id) %>
+    </div>
+  <% end %>
+</div>

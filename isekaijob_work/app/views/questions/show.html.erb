@@ -1,0 +1,38 @@
+<p>app/views/questions/show.html.erb</p>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- モバイルなどの小さい画面を持つデバイスでウェブページを表示する際に、ビューポートの設定を指定するためのHTMLメタタグ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 外部のCSSファイルをリンク -->
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/questions/show.css">
+</head>
+
+
+<body>
+  <div class="Question_pop">
+    <img class="question-image" alt="Question_pop" src="/assets/Question_pop.png">
+    <div class="question_text">
+      <%= @question.question_text %>
+    </div>
+  </div>
+
+
+  <div class="YESNO_answer">
+    <% if @next_question %>
+      <%= link_to question_path(@next_question, choice: 'YES') do %>
+        <%= image_tag '/assets/YES.png', alt: 'YES' %>
+      <% end %>
+      <%= link_to question_path(@next_question, choice: 'NO') do %>
+        <%= image_tag '/assets/NO.png', alt: 'NO' %>
+      <% end %>
+    <% else %>
+      <p><%= link_to 'リザルトへ', results_path %></p>
+    <% end %>
+  </div>
+</body>
+</html>

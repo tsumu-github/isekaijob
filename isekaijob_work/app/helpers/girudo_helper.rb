@@ -1,0 +1,2 @@
+module GirudoHelper
+end

@@ -1,0 +1,102 @@
+/* TOP画面 */
+.TOP {
+  width: 100%;
+  max-width: 100vw; /* モニターの横幅いっぱいに広げる */
+  overflow: hidden; /* 横スクロールを禁止 */
+}
+  
+.TOP img {
+  width: 100%;
+  height: auto; /* アスペクト比を維持しつつ横幅いっぱいに広げる */
+  display: block;
+}
+
+.top-image-container {
+  position: relative;
+}
+
+.top-image {
+  width: 100%;
+  height: auto;
+}
+
+.play-button-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block; /* これは link_to ヘルパーに対して適用されます。 */
+}
+
+
+/* STARTボタン */
+.play-image {
+  display: block; /* これは image_tag に対して適用されます。 */
+  max-width: 20vw; /* 画面幅の20%を最大幅として設定 */
+  height: auto; /* 高さを自動で調整し、アスペクト比を保持 */
+}
+
+/* ★レスポンシブデザイン★ STARTボタン画面横幅が450px以下の時 */
+@media (max-width: 450px) {
+  .play-image {
+    max-width: 45vw; /* 画面幅の50%を最大幅として設定 */
+    /* 必要に応じて他のスタイルを追加 */
+  }
+}
+
+
+
+/* 利用規約、プライバシーポリシー */
+.kiyaku-privacy {
+  position: absolute; /* 絶対位置指定 */
+  top: 0; /* コンテナの上端からの距離 */
+  right: 0; /* コンテナの右端からの距離 */
+  z-index: 10; /* 他の要素より前面に表示 */
+  background: rgba(0, 0, 0, 0.3); /* 背景色を半透明の黒に設定 */
+  padding-top: 0; /* 上側の余白を0に設定 */
+  padding-right: 1vw; /* 右側の余白をビューポートの幅に基づく余白に設定 */
+  padding-bottom: 1vw; /* 下側の余白をビューポートの幅に基づく余白に設定 */
+  padding-left: 1vw; /* 左側の余白をビューポートの幅に基づく余白に設定 */
+  margin: 0; /* マージンをリセット */
+  text-align: left; /* テキストを左寄せにする */
+  width: auto; /* 幅を自動調整 */
+  font-size: 0.8vw; /* ビューポートの幅に基づくフォントサイズ */
+}
+
+
+.kiyaku-privacy a {
+  color: #dddddd; /* リンクのテキスト色を白に設定 */
+  text-decoration: none; /* 下線を消す */
+}
+
+.kiyaku-privacy a:hover,
+.kiyaku-privacy a:focus {
+  color: #ffffff; /* ホバーまたはフォーカス時の色を設定（必要に応じて） */
+  text-decoration: underline; /* ホバーまたはフォーカス時に下線を表示 */
+}
+
+
+.kiyaku,
+.privacy {
+  margin-bottom: 5px; /* テキスト間の余白 */
+}
+
+
+
+/* ★レスポンシブデザイン★ 画面横幅が450px以下の時 */
+@media (max-width: 450px) {
+  .top-image-container .top-image {
+    display: none; /* 通常の画像を非表示にする */
+  }
+
+  .top-image-container::before {
+    content: ''; /* 仮の要素を挿入して背景画像として表示 */
+    display: block;
+    width: 100%;
+    height: 100vh; /* ビューポートの100%の高さに設定して画面いっぱいに */
+    background-image: url('/assets/TOP_mini.gif'); /* 小さい画像のパス */
+    background-size: cover; /* 画像がコンテナを覆うように設定 */
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+
+  <%# モバイルなどの小さい画面を持つデバイスでウェブページを表示する際に、ビューポートの設定を指定するためのHTMLメタタグ %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <%# Twitterカード %>
+  <% content_for :meta_tags do %>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@tsumooon">
+    <meta name="twitter:title" content="魔法少女Redo">
+    <meta name="twitter:description" content="自己診断アプリ">
+    <meta name="twitter:image" content="<%= image_url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguh2c3LsLPD87vLIlKXbulquxVhUy6Mp1FdH83j3bHBh9RIsQJDSGZ3qWsLpYBBSpmMTpHxMPLIuAQmuYLcQFvgIuPTKDH1fuzgoj5p3-glShSkocgxuqFWr3_RcTwuJASV6X27Q2cgBKFS_k1Lots4o_ESoyzFOAf7SIQc0DULVElxQJhIs8dpL6AgbFL/s606/syougatsu_hatsuhinode_2024.png') %>">
+  <% end %>
+</head>
+<body>
+
+    <div class="top-image-container">
+      <img src="<%= asset_path('TOP.gif') %>" alt="TOP GIF" class="top-image">
+        <%= link_to girudo_questions_path, class: 'play-button-container' do %>
+        <%= image_tag 'PLAY.png', alt: '診断スタート', class: 'play-image' %>
+      <% end %>
+      <div class="kiyaku-privacy">
+        <br><%= link_to "▼ 利用規約", riyoukiyaku_path %></br>
+        <br><%= link_to "▼ プライバシーポリシー", privacy_policy_path %></br>
+      </div>
+    </div>
+
+</body>
+</html>

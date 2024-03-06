@@ -1,0 +1,2 @@
+module GirudoQuestionsHelper
+end
