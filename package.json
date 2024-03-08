@@ -12,7 +12,6 @@
   "devDependencies": {
   },
   "scripts": {
-    "build": "webpack",
     "heroku-postbuild": "npm run build"
   }
 }
