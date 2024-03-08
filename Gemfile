@@ -78,4 +78,4 @@ gem "webpacker"
 # Herokuデプロイのため追加
 gem 'rake'
 
-gem 'sqlite3', group: :development
+# gem 'sqlite3', group: :development
