@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 // ここから
 const customConfig = {
@@ -11,6 +12,14 @@ const customConfig = {
       child_process: false
     }
   }
+};
+
+// environment を定義する
+const environment = {
+  config: new webpack.EnvironmentPlugin({
+    NODE_ENV: 'development', // デフォルトの環境設定
+    // 他の必要な環境変数をここに追加
+  })
 };
 
 environment.config.delete('node.dgram')
@@ -29,4 +38,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
+  // environment を追加
+  plugins: [environment.config]
 };
