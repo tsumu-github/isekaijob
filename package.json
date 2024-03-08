@@ -1,4 +1,8 @@
 {
+  "engines": {
+    "node": "21.6.1",
+    "npm": "10.2.4"
+  },
   "dependencies": {
     "nes.css": "^2.3.0"
   },
@@ -7,6 +11,7 @@
     "webpack-cli": "^5.1.4"
   },
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "heroku-postbuild": "npm run build"
   }
 }
