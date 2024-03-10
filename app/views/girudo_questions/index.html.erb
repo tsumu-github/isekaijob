@@ -13,7 +13,7 @@
   <% @girudo_questions.each do |girudo_question| %>
     <% first_question_id = girudo_question.questions.order(:id).first.id %>
     <div class="grid-item">
-      <%= link_to image_tag("girudo#{girudo_question.id}.png"), question_path(first_question_id) %>
+      <%= link_to image_tag("/assets/girudo#{girudo_question.id}.png"), question_path(first_question_id) %>
     </div>
   <% end %>
 </div>
