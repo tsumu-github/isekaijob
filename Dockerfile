@@ -23,8 +23,8 @@ COPY Gemfile.lock /app/Gemfile.lock
 RUN bundle install
 
 # Yarn でのパッケージインストール
-COPY yarn.lock /app/yarn.lock
-RUN yarn install
+# COPY yarn.lock /app/yarn.lock
+# RUN yarn install
 
 # アプリケーションのコピー
 COPY . /app
