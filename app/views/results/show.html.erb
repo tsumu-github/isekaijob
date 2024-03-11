@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8">
 
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@twitterID" />
+  <meta name="twitter:title" content="アプリケーション名" />
+  <meta name="twitter:description" content="○○○" />
+  <meta name="twitter:image" content="<%= 'PLAY.png' %>" />
+
   <!-- モバイルなどの小さい画面を持つデバイスでウェブページを表示する際に、ビューポートの設定を指定するためのHTMLメタタグ -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,7 +17,7 @@
 
   <!-- 外部のCSSファイルをリンク -->
   <link rel="stylesheet" type="text/css" href="/assets/stylesheets/results/show.css">
-
+</head>
 
 <body>
   <%# 羽画像 %>
@@ -158,9 +164,7 @@
   </div>
   <div class="X_buttun">
     <%= link_to root_path do %>
-      <%= link_to "https://twitter.com/share?url=#{request.url}", title: 'Twitter', target: '_blank' do %>
-        <%= image_tag 'X_buttun.gif', alt: 'X_buttun.gif' %>
-      <% end %>
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <% end %>
   </div>
 </div>
