@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
 
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@twitterID" />
-  <meta name="twitter:title" content="アプリケーション名" />
-  <meta name="twitter:description" content="○○○" />
-  <meta name="twitter:image" content="<%= 'PLAY.png' %>" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@tsumooon" />
+  <meta name="twitter:title" content="aaaaaaaaaaaaa" />
+  <meta name="twitter:description" content="bbbbbbbbbbbb" />
+  <meta name="twitter:image" content=@job_profile.share_gazo />
 
   <!-- モバイルなどの小さい画面を持つデバイスでウェブページを表示する際に、ビューポートの設定を指定するためのHTMLメタタグ -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -164,7 +164,9 @@
   </div>
   <div class="X_buttun">
     <%= link_to root_path do %>
-      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <%= link_to "https://twitter.com/share?url=#{root_url}&text=【テスト】%0a%0a#{@job_profile.share_gazo}%0a%0a★試してみて★%0a", title: 'Twitter', target: '_blank' do %>
+        <%= image_tag 'X_buttun.gif', alt: 'X_buttun.gif' %>
+      <% end %>
     <% end %>
   </div>
 </div>
