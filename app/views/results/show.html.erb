@@ -158,7 +158,9 @@
   </div>
   <div class="X_buttun">
     <%= link_to root_path do %>
-      <%= image_tag("X_buttun.gif", alt: "X_buttun.gif") %>
+      <%= link_to "https://twitter.com/share?url=#{request.url}", title: 'Twitter', target: '_blank' do %>
+        <%= image_tag 'X_buttun.gif', alt: 'X_buttun.gif' %>
+      <% end %>
     <% end %>
   </div>
 </div>
