@@ -8,6 +8,8 @@ class ResultsController < ApplicationController
     # データベースからimage_url_magicalgirl_gazoの値を取得し、ビューに表示するために、
     # session[:result_id]に対応するJobProfileを検索し、インスタンス変数に格納
     @job_profile = JobProfile.find_by(result_id: @result.id)
+
+    render :layout => false
   end
 
   def new
