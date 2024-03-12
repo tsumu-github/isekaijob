@@ -12,11 +12,16 @@
   <!-- 外部のCSSファイルをリンク -->
   <link rel="stylesheet" type="text/css" href="/assets/stylesheets/results/show.css">
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@tsumooon" />
-  <meta name="twitter:title" content="魔法少女Level:0" />
-  <meta name="twitter:description" content="魔法少女に変身・・・！自己診断アプリ" />
-  <meta name="twitter:image" content="<%= 'https://raw.githubusercontent.com/tsumu-github/isekaijob/main/app/assets/images/ogp.png' %>">
+  <link rel="canonical" href="https://magical-girl-zero-027819c943b4.herokuapp.com">
+  <meta property="og:site_name" content="JustBe U">
+  <meta property="og:title" content="ちいかわの好きなキャラ">
+  <meta property="og:description" content="うさぎです">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://magical-girl-zero-027819c943b4.herokuapp.com">
+  <meta property="og:image" content="https://raw.githubusercontent.com/tsumu-github/isekaijob/main/app/assets/images/ogp.png">
+  <meta property="og:local" content="ja-JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/tsumu-github/isekaijob/main/app/assets/images/ogp.png">
 </head>
 
 <body>
@@ -179,6 +184,6 @@
 <p>あなたの結果は <%= @result.result_text %> です。合計ポイント: <%= session[:answers]['YES'] %></p>
 
 <a href="https://twitter.com/intent/tweet?text=私は★★に変身しました🌟&url=https://magical-girl-zero-027819c943b4.herokuapp.com/&hashtags=魔法少女Level0,まほゼロ,自己診断アプリ" target="_blank">Twitterでシェア</a>
-
+<a target="_blank" href="https://x.com/share?url=https://magical-girl-zero-027819c943b4.herokuapp.com/&amp;text=私は★★に変身しました🌟%0a%0a %23魔法少女Level0 %23まほゼロ %23自己診断アプリ">結果を<i class="fa-brands fa-x-twitter"></i>シェアする</a>  
 </body>
 </html>
