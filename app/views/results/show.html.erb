@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head prefix="og: http://ogp.me/ns# website: http://ogp.me/ns/website#">
   <meta charset="UTF-8">
+
+  <link rel="canonical" href="https://magical-girl-zero-027819c943b4.herokuapp.com">
+  <meta property="og:site_name" content="JustBe U" />
+  <meta property="og:title" content="ちいかわの好きなキャラ" />
+  <meta property="og:description" content="うさぎです" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://magical-girl-zero-027819c943b4.herokuapp.com" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/tsumu-github/isekaijob/main/app/assets/images/ogp.png" />
+  <meta property="og:local" content="ja-JP" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/tsumu-github/isekaijob/main/app/assets/images/ogp.png" />
 
   <title>App</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
 
   <!-- アプリケーションのスタイルシートを読み込むだけでなく、Turboフレームワークと連携してページの再読み込み時の動作を制御する -->
   <%= stylesheet_link_tag "application.css", "data-turbo-track": "reload" %>
@@ -21,19 +30,11 @@
   <!-- 外部のCSSファイルをリンク -->
   <link rel="stylesheet" type="text/css" href="/assets/stylesheets/results/show.css">
 
-  <link rel="canonical" href="https://magical-girl-zero-027819c943b4.herokuapp.com">
-  <meta property="og:site_name" content="JustBe U">
-  <meta property="og:title" content="ちいかわの好きなキャラ">
-  <meta property="og:description" content="うさぎです">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://magical-girl-zero-027819c943b4.herokuapp.com">
-  <meta property="og:image" content="https://raw.githubusercontent.com/tsumu-github/isekaijob/main/app/assets/images/ogp.png">
-  <meta property="og:local" content="ja-JP">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/tsumu-github/isekaijob/main/app/assets/images/ogp.png">
 </head>
 
 <body>
+<a target="_blank" href="https://x.com/share?url=https://magical-girl-zero-027819c943b4.herokuapp.com/&amp;text=私は★★に変身しました🌟%0a%0a %23魔法少女Level0 %23まほゼロ %23自己診断アプリ">結果を<i class="fa-brands fa-x-twitter"></i>シェアする</a>
+
   <%# 羽画像 %>
   <div class="hane">
     <img src="/assets/hane.gif" alt="hane.gif">
