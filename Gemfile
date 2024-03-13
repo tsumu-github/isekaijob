@@ -79,3 +79,6 @@ gem "webpacker"
 gem 'rake'
 
 # gem 'sqlite3', group: :development
+
+# X共有機能
+gem "meta-tags"
