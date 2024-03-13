@@ -10,7 +10,7 @@ class ResultsController < ApplicationController
     @job_profile = JobProfile.find_by(result_id: @result.id)
 
     # application.html.erb を読み込まない
-    render :layout => false
+    # render :layout => false
   end
 
   def new
