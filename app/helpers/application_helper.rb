@@ -23,7 +23,7 @@ module ApplicationHelper
           twitter: {
             card: 'summary_large_image',
             site: '@',
-            image: 'https://magical-girl-zero-027819c943b4.herokuapp.com/assets/Setsumei.png'
+            image: image_url('ogp.png')
           }
         }
       end
