@@ -2,8 +2,8 @@ module ApplicationHelper
 
     def default_meta_tags
         {
-          site: '魔法少女:Level0',
-          title: '運動習慣定着のための記録・ゲーミフィケーションサービス',
+          site: 'まほゼロ',
+          title: '魔法少女:Level0',
           reverse: true,
           charset: 'utf-8',
           description: '魔法少女に変身・・・！自己診断アプリ',
