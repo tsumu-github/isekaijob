@@ -3,14 +3,14 @@
   <head>
     <title>App</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= display_meta_tags(default_meta_tags) %>
-    
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <!-- アプリケーションのスタイルシートを読み込むだけでなく、Turboフレームワークと連携してページの再読み込み時の動作を制御する -->
+    <%= stylesheet_link_tag "application.css", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
 
-
-    
+    <%= display_meta_tags(default_meta_tags) %>
 
   </head>
 

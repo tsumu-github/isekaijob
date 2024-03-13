@@ -9,7 +9,8 @@ class ResultsController < ApplicationController
     # session[:result_id]に対応するJobProfileを検索し、インスタンス変数に格納
     @job_profile = JobProfile.find_by(result_id: @result.id)
 
-    
+    # application.html.erb を読み込まない
+    render :layout => false
   end
 
   def new
