@@ -1,6 +1,6 @@
-<%# CSSファイルを読み込む %>
-<%= stylesheet_link_tag 'girudo_questions/index' %>
-
+<% content_for :head do %>
+  <%= stylesheet_link_tag 'girudo_questions/index' %>
+<% end %>
 
 <%# ギルド選択画面の文字 %>
 <div class="line">
