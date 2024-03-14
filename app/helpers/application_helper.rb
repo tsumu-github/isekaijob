@@ -2,7 +2,7 @@ module ApplicationHelper
 
     def default_meta_tags
         {
-          site: 'まほゼロ',
+          site: '自己診断アプリ',
           title: '魔法少女:Level0',
           reverse: true,
           charset: 'utf-8',
