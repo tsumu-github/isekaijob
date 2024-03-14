@@ -1,22 +1,11 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-
-  <%# モバイルなどの小さい画面を持つデバイスでウェブページを表示する際に、ビューポートの設定を指定するためのHTMLメタタグ %>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-
-    <div class="top-image-container">
-    <img src="<%= '/assets/TOP.gif' %>" alt="TOP GIF" class="top-image">
-      <%= link_to girudo_questions_path, class: 'play-button-container' do %>
-        <%= image_tag 'PLAY.png', alt: '診断スタート', class: 'play-image' %>
-      <% end %>
-      <div class="kiyaku-privacy">
-        <br><%= link_to "▼ 利用規約", riyoukiyaku_path %></br>
-        <br><%= link_to "▼ プライバシーポリシー", privacy_policy_path %></br>
-      </div>
-    </div>
-</body>
-</html>
+<div class="top-image-container">
+<img src="<%= '/assets/TOP.gif' %>" alt="TOP GIF" class="top-image">
+  <%= link_to girudo_questions_path, class: 'play-button-container' do %>
+    <%= image_tag 'PLAY.png', alt: '診断スタート', class: 'play-image' %>
+  <% end %>
+  
+  <div class="kiyaku-privacy">
+    <br><%= link_to "▼ 利用規約", riyoukiyaku_path %></br>
+    <br><%= link_to "▼ プライバシーポリシー", privacy_policy_path %></br>
+  </div>
+</div>
