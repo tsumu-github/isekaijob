@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%# アプリケーションのスタイルシートを読み込むだけでなく、Turboフレームワークと連携してページの再読み込み時の動作を制御する %>
-    <%= stylesheet_link_tag "application.css", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
     <%= javascript_importmap_tags %>
+    <%= yield :head %>
 
     <%# app/helpers/application_helper.rbのメタデータを読み込む %>
     <%= display_meta_tags(default_meta_tags) %>
-
   </head>
 
   <body>
     <%= yield %>
   </body>
+
 </html>
