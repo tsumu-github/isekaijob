@@ -5,5 +5,3 @@
 
 //= link girudo_questions/index.css
 //= link questions/show.css
-
-//= link favicon.ico
