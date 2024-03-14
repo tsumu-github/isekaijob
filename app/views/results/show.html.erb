@@ -63,6 +63,28 @@
     <img src="/assets/tuyomi.gif" alt="tuyomi.gif">
   </div>
 
+<%# スライドの外枠 %>
+<div class="slide-wrapper">
+  <%# スライド（コンテンツ） %>
+  <div id="slide" class="slide">
+    <% if @job_profile.present? %>
+      
+      <div>
+        <%= simple_format(@job_profile.strengths) %>
+      </div>
+
+      <div>
+        <%= simple_format(@job_profile.zyakuten) %>
+      </div>
+
+      <div>
+        <p><%= simple_format(@job_profile.refresh) %></p>
+      </div>
+
+    <% end %>
+  </div>
+
+
 
 
 <a href="https://twitter.com/intent/tweet?text=私は★★に変身しました🌟&url=https://magical-girl-zero-027819c943b4.herokuapp.com/&hashtags=魔法少女Level0,まほゼロ,自己診断アプリ" target="_blank">Twitterでシェア</a>
