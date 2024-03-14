@@ -12,8 +12,6 @@
   }
 
 
-
-
 /* YESNO_answerの位置調節Start */
 .YESNO_answer {
     display: flex;
@@ -36,55 +34,54 @@
 /* YESNO_answerの位置調節End */
 
 
+/* コマンド画像Start */
+.Question_pop img.question-image {
+  max-width: 100%;
+  height: auto;
+}
+/* コマンド画像End */
 
 
-  /* コマンド画像 */
-  .Question_pop img.question-image {
-    max-width: 100%;
-    height: auto;
+/* ★レスポンシブデザイン★ 画面が900px以下の時 */
+@media (max-width: 900px) {
+.Question_pop img.question-image {
+  display: none; /* 通常の画像を非表示にする */
   }
-  
-  /* ★レスポンシブデザイン★ 画面が900px以下の時 */
-  @media (max-width: 900px) {
-  .Question_pop img.question-image {
-    display: none; /* 通常の画像を非表示にする */
-    }
-  
-  .Question_pop::before {
-    content: ''; /* 仮の要素を挿入して背景画像として表示 */
-    display: block;
-    width: 100%;
-    height: 60vh; /* ビューポートの60%の高さに設定 */
-    background-image: url('/assets/Question_pop_mini.png'); /* 小さい画像のパス */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    }
+.Question_pop::before {
+  content: ''; /* 仮の要素を挿入して背景画像として表示 */
+  display: block;
+  width: 100%;
+  height: 60vh; /* ビューポートの60%の高さに設定 */
+  background-image: url('/assets/Question_pop_mini.png'); /* 小さい画像のパス */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   }
+}
 
 
+/* question_textの位置調節 */
+.question_text {
+position: absolute;
+top: 30%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: black;
+z-index: 2;
+font-size: 120%; /* デフォルトのフォントサイズ */
+max-width: 35%; /* 画像の最大幅を設定（画像がコンテナより大きくならないように） */
+max-height: 10%; /* 画像の最大幅を設定（画像がコンテナより大きくならないように） */
+}
 
-  /* question_textの位置調節 */
-  .question_text {
-  position: absolute;
-  top: 35%;
+
+/* ★レスポンシブデザイン★ 画面が900px以下の時 */
+@media (max-width: 900px) {
+.question_text {
+  top: 30%; /* 上下中央配置から30%下に移動 */
   left: 50%;
-  transform: translate(-50%, -50%);
-  color: black;
-  z-index: 2;
-  font-size: 120%; /* デフォルトのフォントサイズ */
-  max-width: 35%; /* 画像の最大幅を設定（画像がコンテナより大きくならないように） */
-  max-height: 10%; /* 画像の最大幅を設定（画像がコンテナより大きくならないように） */
+  transform: translate(-50%, 50%); /* 左上基準から左中央基準に変更 */
+  font-size: 60%; /* 画面が500px以下のときのフォントサイズ */
+  max-width: 90%; /* 画面が500px以下のときの最大幅 */
+  max-height: 100%; /* 画像の最大幅を設定（画像がコンテナより大きくならないように） */
   }
-
-  /* ★レスポンシブデザイン★ 画面が900px以下の時 */
-  @media (max-width: 900px) {
-  .question_text {
-    top: 30%; /* 上下中央配置から30%下に移動 */
-    left: 50%;
-    transform: translate(-50%, 50%); /* 左上基準から左中央基準に変更 */
-    font-size: 60%; /* 画面が500px以下のときのフォントサイズ */
-    max-width: 90%; /* 画面が500px以下のときの最大幅 */
-    max-height: 100%; /* 画像の最大幅を設定（画像がコンテナより大きくならないように） */
-    }
-  }
+}
