@@ -31,6 +31,14 @@
   <% end %>
 
 
+  <%# 魔法少女の説明 %>
+  <% if @job_profile.present? %>
+    <div class="job_profile_content">
+      <%= simple_format(@job_profile.content) %>
+    </div>
+  <% end %>
+
+
 
 
 <a href="https://twitter.com/intent/tweet?text=私は★★に変身しました🌟&url=https://magical-girl-zero-027819c943b4.herokuapp.com/&hashtags=魔法少女Level0,まほゼロ,自己診断アプリ" target="_blank">Twitterでシェア</a>
