@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_03_06_100747) do
+ActiveRecord::Schema[7.0].define(version: 2024_03_15_133235) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -43,7 +43,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_06_100747) do
     t.text "compatibility"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "share_gazo"
     t.index ["result_id"], name: "index_job_profiles_on_result_id"
   end
 
