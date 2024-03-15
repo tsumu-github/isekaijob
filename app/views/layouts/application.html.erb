@@ -12,7 +12,12 @@
     <%# app/helpers/application_helper.rbのメタデータを読み込む %>
     <%= display_meta_tags(default_meta_tags) %>
 
+    <%# ブラウザ用のファビコンを表示 %>
     <%= favicon_link_tag('favicon.ico') %>
+
+    <%# Googlefontを設定 %>
+    <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+
   </head>
 
   <body>
